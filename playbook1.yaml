@@ -1,0 +1,6 @@
+- name: Riya
+  hosts: web
+  tasks: #task or module or collections
+  -name: ping the server
+    ansible.builtin.ping:
+
