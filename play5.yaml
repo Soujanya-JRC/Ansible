@@ -3,12 +3,20 @@
   connection: local
   vars:
     Greet: hello
-    name: riya
+    user: riya
   tasks:
   - name: to print a greeting
     vars:
       Greet: hi
-      name: cham
+      user: cham
     ansible.builtin.debug:
-      msg: "{{ Greet }}"
+      msg: "{{ Greet }}, {{ user }}"
+
+  - name: to print a greeting
+    vars:
+      Greet: hihello
+      user: cham
+    ansible.builtin.debug:
+      msg: "{{ Greet }}, {{ user }}"
+   
   
