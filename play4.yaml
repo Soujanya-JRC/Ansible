@@ -1,0 +1,11 @@
+- name: variables 
+  hosts: local
+  connections: local
+  vars:
+    course: ansible
+    duration: "120 hrs"
+    coursefee: 200
+  tasks:
+  - name: print the variable  
+    ansible.builtin.debug:
+    msg: "course is {{ course }}, duration is {{ duration }}, course fee is {{ coursefee}}"
