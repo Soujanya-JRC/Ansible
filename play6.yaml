@@ -1,0 +1,9 @@
+- name: variables from files
+  hosts: local
+  connection: local
+  vars_files:
+  - vars.yaml
+  tasks: 
+  - name: print user greeting
+    ansible.builtin.debug:
+     msg: "{{ Greet }},{{ user }}"
