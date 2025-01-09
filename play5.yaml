@@ -1,0 +1,14 @@
+- name: variables example
+  hosts: local
+  connection: local
+  vars:
+    Greet: hello
+    name: riya
+  tasks:
+  - name: to print a greeting
+    vars:
+      Greet: hi
+      name: cham
+    ansible.builtin.debug:
+      msg: "{{ Greet }}"
+  
