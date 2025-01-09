@@ -1,0 +1,14 @@
+- name: read variable from prompt
+  hosts: local
+  connetcion: local
+  var_prompt:
+    - name: greet
+      prompt: please enter username
+    - name: user
+      prompt: please greet the user
+      private: false
+  tasks: 
+    - name: to print a greeting
+      ansible.builtin.debug:
+        msg: "hi {{ greet }}, {{ user }} "
+
