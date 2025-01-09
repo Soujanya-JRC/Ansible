@@ -1,7 +1,7 @@
 - name: read variable from prompt
   hosts: local
   connection: local
-  var_prompt:
+  vars_prompt:
     - name: greet
       prompt: please enter username
     - name: user
