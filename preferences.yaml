@@ -5,13 +5,13 @@
     Animal: "cat"
   vars_files: #var from files
     - vars.yaml
-  vars_prompt:
-  - name: #vars from prompt
-    prompt: enter value
-    private: false
+  # vars_prompt:
+  # - name: #vars from prompt
+  #   prompt: enter value
+  #   private: false
   tasks:
   - name: task variable
-    vars:
+    #vars:
       Animal: "cat task"
     ansible.builtin.debug:
       msg: "{{ Animal }}"
