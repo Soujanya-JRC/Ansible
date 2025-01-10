@@ -9,9 +9,9 @@
   - name: #vars from prompt
     prompt: enter value
     private: false
-  tasks: #task level variables
+  tasks:
   - name: task variable
-      vars:
+     vars:
       Animal: "cat task"
-      ansible.builtin.debug:
-        msg: "{{ Animal }}"
+    ansible.builtin.debug:
+      msg: "{{ Animal }}"
