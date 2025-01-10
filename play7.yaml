@@ -1,13 +1,13 @@
 - name: read variable from prompt
   hosts: local
   connection: local
-  #vars_prompt:
-    #- name: greet
-      #prompt: please enter username
-      #private: false
-    #- name: user
-      #prompt: please greet the user
-      #private: false
+  vars_prompt:
+    - name: greet
+      prompt: please enter username
+      private: false
+    - name: user
+      prompt: please greet the user
+      private: false
   tasks: 
     - name: to print a greeting
       ansible.builtin.debug:
