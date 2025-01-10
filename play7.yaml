@@ -1,11 +1,11 @@
 - name: read variable from prompt
   hosts: local
   connection: local
-  vars_prompt:
-    - name: greet
+  #vars_prompt:
+    #- name: greet
       #prompt: please enter username
       #private: false
-    - name: user
+    #- name: user
       #prompt: please greet the user
       #private: false
   tasks: 
