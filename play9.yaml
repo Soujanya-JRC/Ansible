@@ -1,6 +1,6 @@
 - name: read variable from inventory
   hosts: web
-  connection: local
+  #connection: local
   tasks: 
     - name: to print a greeting
       ansible.builtin.debug:
