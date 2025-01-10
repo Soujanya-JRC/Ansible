@@ -11,7 +11,7 @@
     private: false
   tasks: #task level variables
   - name: task variable
-    vars:
-    Animal: "cat task"
-    ansible.builtin.debug:
-      msg: "{{ Animal }}"
+      vars:
+      Animal: "cat task"
+      ansible.builtin.debug:
+        msg: "{{ Animal }}"
