@@ -4,7 +4,7 @@
   #vars: #play level variable
     #Animal: "cat"
   #vars_files: #var from files
-    - vars.yaml
+    #- vars.yaml
   # vars_prompt:
   # - name: #vars from prompt
   #   prompt: enter value
