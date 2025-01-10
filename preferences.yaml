@@ -1,0 +1,17 @@
+- name: preference
+  hosts: local
+  connection: local
+  vars: #play level variable
+    Animal: "cat"
+  vars_files: #var from files
+    vars.yaml
+  vars_prompt:
+  - name: #vars from prompt
+    prompt: enter value
+    private: false
+  tasks: #task level variables
+  - name: task variable
+    vars:
+    Animal: "cat task"
+    ansible.built.in.debug:
+      msg: "{{ Animal }}"
