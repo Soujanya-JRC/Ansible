@@ -13,5 +13,5 @@
   - name: task variable
     vars:
     Animal: "cat task"
-    ansible.built.in.debug:
+    ansible.builtin.debug:
       msg: "{{ Animal }}"
