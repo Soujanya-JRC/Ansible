@@ -1,0 +1,14 @@
+- name: loop1
+  hosts: local
+  connection: local
+  vars:
+    a: 5
+  tasks:
+  - name: condition1
+    ansible.builtin.debug:
+      msg: "given number  {{ a }}is greater than 10"
+    when: a > 10
+  - name: condition2
+    ansible.builtin.debug:
+      msg: "given number {{ a }} is less than 1o"
+    when: a < 10
