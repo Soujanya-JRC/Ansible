@@ -15,5 +15,11 @@
     vars:
       name: riya
     ansible.builtin.debug:
-      msg: "hello {{ name | upper }}"
       msg: "hello {{ name | lower }}"
+
+  - name: convert lower to upper
+    vars:
+      name: riya
+    ansible.builtin.debug:
+      msg: "hello {{ name | upper }}"
+      
