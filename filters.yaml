@@ -14,7 +14,8 @@
 
   - name: convert list into map
     vars:
-      course: devsecops
+      course:
+      name: devsecops
       duration: 10hrs
       status: explained
     ansible.builtin.debug:
