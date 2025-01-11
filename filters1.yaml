@@ -1,4 +1,4 @@
-- name: # convert list into map
+- name: convert list into map
   hosts: local
   connection: local
   vars:
