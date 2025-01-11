@@ -1,0 +1,10 @@
+- name: # convert list into map
+  hosts: local
+  connection: local
+  vars:
+    course:
+      - {'key': 'name', 'value': 'devsecops'}
+      - {'key': 'duration', 'value': '10hrs'}
+      - {'key': 'status', 'value': 'explained'}
+  ansible.builtin.debug:
+    msg: "course info: {{ course | items2dict }}"
