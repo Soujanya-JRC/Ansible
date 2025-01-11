@@ -23,7 +23,7 @@
     ansible.builtin.debug:
       msg: "hello {{ name | upper }}"
 
-  -name: print min and max
+  - name: print min and max
     vars:
       numbers: [10,20,30,40, 50]
     ansible.builtin.debug:
