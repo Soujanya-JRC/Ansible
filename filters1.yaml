@@ -6,5 +6,7 @@
       - {'key': 'name', 'value': 'devsecops'}
       - {'key': 'duration', 'value': '10hrs'}
       - {'key': 'status', 'value': 'explained'}
-  ansible.builtin.debug:
-    msg: "course info: {{ course | items2dict }}"
+  tasks:
+  - name: list to map
+    ansible.builtin.debug:
+      msg: "course info: {{ course | items2dict }}"
