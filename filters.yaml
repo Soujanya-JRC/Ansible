@@ -5,3 +5,10 @@
   - name: filtering
     ansible.builtin.debug:
       msg: "hello {{ person | default('riya')}}"
+
+  - name: convert string to list
+    vars:
+      fruits: "apple, banaana,mango" #string
+     ansible.builtin.debug:
+      msg: "fruits are : {{ fruits | split(',') }}" 
+  
