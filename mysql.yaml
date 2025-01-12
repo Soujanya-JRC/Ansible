@@ -24,6 +24,7 @@
       login_password: ExpenseApp@1
       login_host: mysql.jnrc.online
     register: mysql_info
+    ignore_errors: true
 
   - name: print the output
     ansible.builtin.debug:
