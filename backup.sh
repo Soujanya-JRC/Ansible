@@ -19,7 +19,7 @@ USAGE(){
     echo -e "$R USAGE:: $N sh backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS(optional)>"
     exit 1
 }
-if [ $# -le 2]
+if [ $# -le 2 ]
 then 
     USAGE
 fi
