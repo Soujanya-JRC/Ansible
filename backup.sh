@@ -10,7 +10,7 @@ DEST_DIR=$2
 DAYS=${3:-14} #if user is not providing numberof days we take 14 days by default
 
 LOGS_FOLDER="/home/ec2-user/shell-logs"
-LOG_FILE=$(echo $0 | cut -d "." -f1 )
+LOG_FILE=$(echo $0 | awk -f "/" '${print $NF}' | cut -d "." -f1 )
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
