@@ -56,9 +56,9 @@ then
             rm -rf $filepath
             echo "deleted file: $filepath"
         done <<< $FILES
-        else
-            echo -e "$R Error:: $N failed to create zip file"
-            exit 1
     else
-        echo "no files found older than $DAYS "
+        echo -e "$R Error:: $N failed to create zip file"
+        exit 1
+else
+    echo "no files found older than $DAYS "
 fi
