@@ -55,7 +55,7 @@ then
             echo "deleting file: $filepath" 
             rm -rf $filepath
             echo "deleted file: $filepath"
-        doen <<< $FILES
+        done <<< $FILES
     else
         echo -e "$R Error:: $N failed to create zip file"
         exit 1
