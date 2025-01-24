@@ -37,8 +37,8 @@
     path: /app
 
 - name: copy backend service
-  ansible.builtin.copy:
-    src: backend.service
+  ansible.builtin.template:
+    src: backend.service.j2
     dest: /etc/systemd/system/backend.service
 
 - name: install python libraries
@@ -54,9 +54,9 @@
   community.mysql.mysql_db:
     state: import
     name: all
-    login_user: root
-    login_password: ExpenseApp@1
-    login_host: mysql.jnrc.online
+    login_user: "{{ MYSQL_USER }}"
+    login_password: "{{ MYSQL_PASSWORD }}"
+    login_host: "{{ MYSQL_HOST }}"
     target: /app/schema/backend.sql
 
 - name: daemon reload and restart service
